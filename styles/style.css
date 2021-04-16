@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/*templatesファイルのvariables.scssを参照している */
+/*breakpointsのbase.scssを参照している*/
+/*modulesの同上*/
+.title-container {
+  color: #707070;
+  background-color: #a996dd;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.title-container .title-text {
+  margin: auto 0;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.title-container .select-menu-btn {
+  display: block;
+  margin: auto 0;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.title-container .select-menu-btn .menu-item {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+.title-container .select-menu-btn .menu-item:last-child {
+  margin-bottom: 0;
+}
+
+.select-menu {
+  text-align: center;
+  background-color: #d1d1d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+}
+
+.select-menu.open {
+  top: 50px;
+  z-index: 10;
+}
+
+/*それぞれの画面サイズに合わせたもの*/
+/*# sourceMappingURL=style.css.map */
