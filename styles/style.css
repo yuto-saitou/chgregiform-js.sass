@@ -1,56 +1,112 @@
 @charset "UTF-8";
 /*templatesファイルのvariables.scssを参照している */
 /*breakpointsのbase.scssを参照している*/
-/*modulesの同上*/
-.title-container {
+body {
+  font-family: 'Kameron', serif;
+  font-family: 'Shippori Mincho', serif;
   color: #707070;
-  background-color: #a996dd;
-  height: 50px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.mb-sm {
+  margin-bottom: 18px;
+}
+
+.mb-lg {
+  margin-bottom: 50px;
+}
+
+/*modulesの同上*/
+.header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  height: 80px;
+  background-color: #D6C5FB;
 }
 
-.title-container .title-text {
+.header-container__title {
   margin: auto 0;
-  margin-left: 10px;
-  font-size: 20px;
+  margin-left: 20px;
 }
 
-.title-container .select-menu-btn {
-  display: block;
+.header-container__menu {
   margin: auto 0;
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: 20px;
+  position: relative;
 }
 
-.title-container .select-menu-btn .menu-item {
+.header-container__menu .header-mobile-menu {
+  margin: auto 0;
+}
+
+.header-container__menu .header-mobile-menu .mobile-menu-item {
   display: block;
-  width: 40px;
+  width: 50px;
   height: 2px;
-  background-color: black;
   margin-bottom: 10px;
+  background-color: #646464;
 }
 
-.title-container .select-menu-btn .menu-item:last-child {
+.header-container__menu .header-mobile-menu .mobile-menu-item:last-child {
   margin-bottom: 0;
 }
 
-.select-menu {
-  text-align: center;
-  background-color: #d1d1d1;
+.header-container__menu .header-menu {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 60px;
+  right: 0px;
   z-index: -10;
-  width: 100%;
+  width: 150px;
+  border: solid 1px black;
+  background-color: #ebe9e9;
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
-.select-menu.open {
-  top: 50px;
+.header-container__menu .header-menu.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
   z-index: 10;
 }
 
-/*それぞれの画面サイズに合わせたもの*/
+.header-container__menu .header-menu .header-menu-list {
+  margin: auto 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header-container__menu .header-menu .header-menu-list .header-menu-item {
+  display: block;
+  margin-bottom: 7px;
+  border-bottom: solid 1px black;
+  cursor: pointer;
+}
+
+.header-container__menu .header-menu .header-menu-list .header-menu-item > a {
+  color: black;
+  text-decoration: none;
+}
+
+.header-container__menu .header-menu .header-menu-list .header-menu-item > a:hover {
+  text-shadow: 2px 2px 3px blue;
+}
+
+.header-container__menu .header-menu .header-menu-list .header-menu-item:first-child {
+  margin-top: 7px;
+}
+
+@-webkit-keyframes kf-open-menu {}
+
+@keyframes kf-open-menu {}/*それぞれの画面サイズに合わせたもの*/
 /*# sourceMappingURL=style.css.map */

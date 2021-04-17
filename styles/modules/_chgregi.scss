@@ -1,51 +1,135 @@
-
-.title-container{
-    color:rgb(112, 112, 112);
-    background-color: rgb(169, 150, 221);
-    height: 50px;
+.header-container {
     display: flex;
-    width: 100%;
+    height: $hHeader;
+    background-color: $cHeader;
 
-    & .title-text{
+    &__title {
         margin: auto 0;
-        margin-left: 10px;
-        font-size: 20px;
+        margin-left: 20px;
+
     }
-    
-    & .select-menu-btn{
-        display: block;
+
+    &__menu {
         margin: auto 0;
         margin-left: auto;
-        margin-right: 10px;
+        margin-right: 20px;
+        position: relative;
 
-        & .menu-item{
-            display: block;
-            width: 40px;
-            height: 2px;
-            background-color: black;
-            margin-bottom: 10px;
+        & .header-mobile-menu {
+            margin: auto 0;
+            & .mobile-menu-item {
+                display: block;
+                width: 50px;
+                height: 2px;
+                margin-bottom: 10px;
+                background-color: $cMobileMenu;
 
-            &:last-child{
-                margin-bottom: 0;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        & .header-menu {
+            position: absolute;
+            top: $hHeader - 20px;
+            right: 0px;
+            z-index: -10;
+            width: 150px;
+            border: solid 1px black;
+            background-color: rgb(235, 233, 233);
+            transform: translateY(-$hHeader);
+            opacity: 0;
+            transition: transform 0.5s, opacity 0.5s;
+
+            &.open {
+                transform: translateY(0);
+                opacity: 1;
+                z-index: 10;
             }
 
+            & .header-menu-list {
+                margin: auto 0;
+                padding-left: 10px;
+                padding-right: 10px;
+
+                & .header-menu-item {
+                    display: block;
+                    margin-bottom: 7px;
+                    border-bottom: solid 1px black;
+                    cursor: pointer;
+
+                    & > a {
+                        color: black;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-shadow: 2px 2px 3px blue;
+                        }
+                    }
+
+                    &:first-child {
+                        margin-top: 7px;
+                    }
+                }
+            }
         }
     }
 }
-.select-menu{
-    text-align: center;
-    background-color: rgb(209, 209, 209);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
-    width: 100%;
 
-    // 見えるようにするクラスを書く
-    &.open{
-        top: 50px;
-        z-index: 10;
-
-    }
+@keyframes kf-open-menu {
 
 }
+
+
+
+// .title-container{
+//     color:rgb(112, 112, 112);
+//     background-color: rgb(169, 150, 221);
+//     height: 50px;
+//     display: flex;
+//     width: 100%;
+
+//     & .title-text{
+//         margin: auto 0;
+//         margin-left: 10px;
+//         font-size: 20px;
+//     }
+    
+//     & .select-menu-btn{
+//         display: block;
+//         margin: auto 0;
+//         margin-left: auto;
+//         margin-right: 10px;
+
+//         & .menu-item{
+//             display: block;
+//             width: 40px;
+//             height: 2px;
+//             background-color: black;
+//             margin-bottom: 10px;
+
+//             &:last-child{
+//                 margin-bottom: 0;
+//             }
+
+//         }
+//     }
+// }
+// .select-menu{
+//     text-align: center;
+//     background-color: rgb(209, 209, 209);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: -10;
+//     width: 100%;
+
+//     // 見えるようにするクラスを書く
+//     &.open{
+//         top: 50px;
+//         z-index: 10;
+
+//     }
+
+// }
