@@ -8,6 +8,7 @@
 @import "modules/login";
 @import "modules/chgregi";
 
+
 /*それぞれの画面サイズに合わせたもの*/
 @media ( min-width: 480px ) {//480px以上の場合
     @import "breakpoints/480up";

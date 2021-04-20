@@ -1,0 +1,11 @@
+.main-chg-container {
+    & .chg-form {
+        & .chg-form1{
+            & .text-form-group1,.text-form-group2{
+                & .form-text {
+                        margin-right: 35%;
+                }
+            }
+        }
+    }
+}
