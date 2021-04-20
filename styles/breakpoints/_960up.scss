@@ -61,20 +61,11 @@
             justify-content: center;
 
             & .text-form-group1{
-                width: 50%;
-
-                & .form-text {
-                    margin-right: 30px;
-                }
+                margin-right: 10px;
             }
 
             & .text-form-group2{
-                width: 50%;
-
-                & .form-text {
-                    margin-left: 10px;
-                }
-
+                margin-left: 10px;
             }
         }
     }
